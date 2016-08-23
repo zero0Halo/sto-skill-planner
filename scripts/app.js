@@ -9,7 +9,14 @@ angular
       .state('home',{
         url: '/',
         templateUrl: 'scripts/templates/home.html',
-        controller: 'homeCtrl'
+        controller: 'homeCtrl',
+        resolve: {
+          skills: ['$http', function($http){
+            return $http.get('data.json').then(function(response){
+              return response.data;
+            })
+          }]
+        }
       })
       .state('about',{
         url: '/about',
