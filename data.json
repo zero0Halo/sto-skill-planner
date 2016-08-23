@@ -22,6 +22,14 @@
     "rank": 0,
     "column": "right",
     "description": "Prepares equipment on the ship."
+  },
+  {
+    "name": "Scan",
+    "type": "science",
+    "tier": 0,
+    "rank": 0,
+    "column": "center",
+    "description": "Scan an enemy for weaknesses."
   }
 ]
 

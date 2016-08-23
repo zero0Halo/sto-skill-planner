@@ -11,10 +11,8 @@ angular
         templateUrl: 'scripts/templates/home.html',
         controller: 'homeCtrl',
         resolve: {
-          skills: ['$http', function($http){
-            return $http.get('data.json').then(function(response){
-              return response.data;
-            })
+          skills: ['Skills', function(Skills){
+            return Skills.getSkills();
           }]
         }
       })
