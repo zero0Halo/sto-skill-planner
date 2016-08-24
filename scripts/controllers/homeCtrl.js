@@ -1,10 +1,18 @@
-angular
-  .module('app')
-  .controller('homeCtrl', ['$scope','skills', function($scope, skills){
-    $scope.title = 'Home';
-    $scope.skills = skills;
+(function(){
 
-    $scope.update = function(){
-      alert();
-    }
-  }]);
+  angular
+    .module('app')
+    .controller('homeCtrl', ['$scope','skills', homeCtrl]);
+
+    //////////
+
+    function homeCtrl($scope, skills){
+      $scope.title = 'Home';
+      $scope.skills = skills;
+
+      $scope.update = function(){
+        alert();
+      }
+    };
+
+})();
